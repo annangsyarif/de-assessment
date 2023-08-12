@@ -4,7 +4,6 @@ import logging
 class DataProcessor:
     def __init__(self, csv_filepath):
         self.csv_filepath = csv_filepath
-        self
 
     def read_csv(self):
         logging.info(f"Read data from {self.csv_filepath}")
