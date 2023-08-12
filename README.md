@@ -68,12 +68,15 @@ CREATE TABLE timesheets (
 # Cloning this repository
 $ git clone git@github.com:annangsyarif/de-assessment.git
 
+# move to project directory
+$ cd python-script
+
 # Install requirements using pip
-$ pip install -r python-script/requirements.txt
+$ pip install -r requirements.txt
 
 # Unit test
-$ python3 -W ignore -m unittest discover -s python-script/package -p "*UnitTest.py"
+$ python3 -W ignore -m unittest discover -s package -p "*UnitTest.py"
 
 # Running the program
-$ python3 -W ignore python-script/main.py
+$ python3 -W ignore main.py
 ```
