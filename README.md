@@ -69,7 +69,7 @@ CREATE TABLE timesheets (
 $ git clone git@github.com:annangsyarif/de-assessment.git
 
 # Install requirements using pip
-$ pip install -r requirements.txt
+$ pip install -r python-script/requirements.txt
 
 # Unit test
 $ python3 -W ignore -m unittest discover -s python-script/package -p "*UnitTest.py"
