@@ -75,7 +75,7 @@ $ cd python-script
 $ pip install -r requirements.txt
 
 # Unit test
-$ python3 -W ignore -m unittest discover -s package -p "*UnitTest.py"
+$ python3 -W ignore -m unittest
 
 # Running the program
 $ python3 -W ignore main.py
