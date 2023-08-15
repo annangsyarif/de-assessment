@@ -1,5 +1,4 @@
-from DataProcessor import DataProcessor
-from Postgres import Postgres
+from package.DataProcessor import DataProcessor
 
 import unittest
 import csv

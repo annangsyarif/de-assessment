@@ -2,8 +2,8 @@ import unittest
 import csv
 import logging
 
-from Postgres import Postgres
-from DataProcessor import DataProcessor
+from package.Postgres import Postgres
+from package.DataProcessor import DataProcessor
 
 class TestPostgresConnection(unittest.TestCase):
     def setUp(self):
