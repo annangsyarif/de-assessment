@@ -42,7 +42,7 @@ class TestCSVToPostgreSQL(unittest.TestCase):
 
             self.assertEqual(data.values.tolist(), self.emp_data[1:])
         except Exception as e:
-            logging.error("Failed to read CSV: ", e)
+            logging.exception("Failed to read CSV: ", str(e))
         finally:
             pass
     
@@ -61,7 +61,7 @@ class TestCSVToPostgreSQL(unittest.TestCase):
 
             self.assertEqual(aggregated.values.tolist(), [[2019, 8, 21, 3, 20], [2019, 8, 21, 4, 10]])
         except Exception as e:
-            logging.error("Failed aggregating data: ", e)
+            logging.exception("Failed aggregating data: ", str(e))
         finally:
             pass
 

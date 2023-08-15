@@ -51,7 +51,7 @@ class TestPostgresConnection(unittest.TestCase):
 
             conn.execute(f"drop table if exists {self.table_name}")
         except Exception as e:
-            logging.error("Failed to fecth data from PostgreSQL: ", e)
+            logging.exception("Failed to fecth data from PostgreSQL: ", str(e))
         finally:
             if conn:
                 conn.close()
@@ -70,7 +70,7 @@ class TestPostgresConnection(unittest.TestCase):
             postgres.insert_to_postgres(data, self.table_name, if_exists="replace")
 
         except Exception as e:
-            logging.error("Error while inserting data to PostgreSQL: ", e)
+            logging.exception("Error while inserting data to PostgreSQL: ", str(e))
         finally:
             if conn:
                 conn.close()
@@ -82,7 +82,7 @@ class TestPostgresConnection(unittest.TestCase):
             conn = postgres.create_postgres_connection()
             self.assertIsNotNone(conn)
         except Exception as e:
-            logging.error("Failed to connect to PostgreSQL: " + e)
+            logging.exception("Failed to connect to PostgreSQL: " + str(e))
         finally:
             if conn:
                 conn.close()

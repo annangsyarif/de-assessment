@@ -24,7 +24,7 @@ class Postgres:
 
             return conn
         except Exception as e:
-            logging.error("Error while connecting to PostgreSQL:", e)
+            logging.exception("Error while connecting to PostgreSQL:", e)
         finally:
             pass
     
@@ -57,7 +57,7 @@ class Postgres:
 
             return df 
         except Exception as e:
-            logging.error("Failed to fetch data from PostgreSQL: ", e)
+            logging.exception("Failed to fetch data from PostgreSQL: ", str(e))
         finally:
             if conn:
                 conn.close()
