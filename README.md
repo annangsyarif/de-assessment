@@ -18,6 +18,9 @@ Some assumptions for the python task in this project:
 * aggregating is only done up to the `daily_total_hours_per_branch`, because the data will be strange if it is done up to the `daily_average_salary_per_branch`
 * this function can be implement using `Apache Ariflow` or another Orchestrator
 
+>Note: <br>
+Another assumption is that if only 1 CSV file is always updated, the solution can be approached using `date > CURRENT_DATE()`.
+
 ## Configuration
 Config for this project `python-script` can be found at [here](https://github.com/annangsyarif/de-assessment/blob/main/python-script/config/config.conf).
 >**_Note_** : Make sure you adjust the configuration before running
